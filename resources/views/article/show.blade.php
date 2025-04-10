@@ -14,20 +14,30 @@
                     alt="Immagine dell'articolo: {{ $article->title }}">
                 <div class="text-center">
                     <h2>{{ $article->subtitle }}</h2>
-                    <p class="fs-5">Categoria:
-                        <a href="{{ route('article.byCategory', $article->category) }}"
-                            class="text-capitalize fw-bold text-muted">{{ $article->category->name }}</a>
-                    </p>
+                    @if ($article->category)
+                        <p class="fs-5">Categoria:
+                            <a href="{{ route('article.byCategory', $article->category) }}"
+                                class="text-capitalize fw-bold text-muted">{{ $article->category->name }}</a>
+                        </p>
+                    @else
+                        <p class="fs-5">Nessuna categoria</p>
+                    @endif
                 </div>
                 <div class="text-muted my-3">
                     <p class="small text-muted">Redatto il {{ $article->created_at->format('d/m/Y') }}<br>
                         da <a class="text-capitalize text-muted"
                             href="{{ route('article.byUser', $article->user) }}">{{ $article->user->name }}</a>
                     </p>
+                    <p class="small text-muted my-0">
+                        <span class="fw-bold">Tags:</span>
+                        @foreach ($article->tags as $tag)
+                            #{{ $tag->name }}
+                        @endforeach
+                    </p>
                 </div>
                 <hr>
                 <p>{{ $article->body }}</p>
-                @if (Auth::user() && Auth::user()->is_revisor)
+                @if (Auth::user() && Auth::user()->is_revisor && $article->is_accepted == null)
                     <div class="container my-5">
                         <div class="row">
                             <div class="col-12 d-flex justify-content-evenly">
