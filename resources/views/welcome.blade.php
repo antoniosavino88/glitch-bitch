@@ -7,6 +7,11 @@
                         {{ session('message') }}
                     </div>
                 @endif
+                @if (session('alert'))
+                    <div class="alert alert-danger">
+                        {{ session('alert') }}
+                    </div>
+                @endif
                 <h1 class="text-center p-5">Glitch&Bitch</h1>
 
                 @foreach ($articles as $article)

@@ -11,8 +11,9 @@
                     <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="{{ route('careers') }}">Lavora con noi</a>
                 </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
@@ -37,6 +38,16 @@
             </form>
         </div>
         @auth
+            @if (Auth::user()->is_admin)
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard Admin</a>
+                </li>
+            @endif
+            @if (Auth::user()->is_revisor)
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('revisor.dashboard') }}">Dashboard Revisor</a>
+                </li>
+            @endif
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('article.create') }}">Inserisci articolo</a>
             </li>
