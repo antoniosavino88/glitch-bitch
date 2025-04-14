@@ -18,6 +18,8 @@
                     #{{ $tag->name }}
                 @endforeach
             </p>
+            <p class="card-subtitle text-muted fst-italic small">tempo di lettura {{$article->readDuration()}} min
+            </p>
         </div>
         <div class="card-footer d-flex justify-content-between align-items-center">
             <p class="small text-muted">Redatto il {{ $article->created_at->format('d/m/Y') }}<br>

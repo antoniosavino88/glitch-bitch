@@ -24,6 +24,8 @@
                     @endif
                 </div>
                 <div class="text-muted my-3">
+                    <p class="card-subtitle text-muted fst-italic small">tempo di lettura {{$article->readDuration()}} min
+                    </p>
                     <p class="small text-muted">Redatto il {{ $article->created_at->format('d/m/Y') }}<br>
                         da <a class="text-capitalize text-muted"
                             href="{{ route('article.byUser', $article->user) }}">{{ $article->user->name }}</a>
