@@ -49,6 +49,11 @@
                             <a class="nav-link" href="{{ route('revisor.dashboard') }}">Dashboard Revisor</a>
                         </li>
                     @endif
+                    @if (Auth::user()->is_writer)
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('writer.dashboard') }}">Dashboard Writer</a>
+                        </li>
+                    @endif
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('article.create') }}">Inserisci articolo</a>
                     </li>
