@@ -1,15 +1,15 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-secondary-subtle text-center">
+    <div class="container-fluid p-5 text-center">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h1 class="display-1">Lavora con noi</h1>
+                <h1 class="display-1 text-title">Lavora con noi</h1>
             </div>
         </div>
     </div>
     <div class="container my-5">
         <div class="row">
             <div class="col-12 col-md-6">
-                <form action="{{route('careers.submit')}}" method="POST" class="card p-5 shadow">
+                <form action="{{ route('careers.submit') }}" method="POST" class="card p-5 shadow bg-2">
                     @csrf
                     <div class="mb-3">
                         <label for="role" class="form-label">Per quale ruolo ti stai candidando?</label>
@@ -32,7 +32,7 @@
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
                         <input type="email" class="form-control" id="email" name="email"
-                            value="{{ Auth::user()->email }}" >
+                            value="{{ Auth::user()->email }}">
                         @error('email')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror

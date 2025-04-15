@@ -1,8 +1,8 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-secondary-subtle text-center">
+    <div class="container-fluid p-5 text-center">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h1 class="display-1">{{ $article->title }}</h1>
+                <h1 class="display-1 text-title">{{ $article->title }}</h1>
             </div>
         </div>
     </div>
@@ -17,20 +17,21 @@
                     @if ($article->category)
                         <p class="fs-5">Categoria:
                             <a href="{{ route('article.byCategory', $article->category) }}"
-                                class="text-capitalize fw-bold text-muted">{{ $article->category->name }}</a>
+                                class="text-capitalize fw-bold">{{ $article->category->name }}</a>
                         </p>
                     @else
                         <p class="fs-5">Nessuna categoria</p>
                     @endif
                 </div>
-                <div class="text-muted my-3">
-                    <p class="card-subtitle text-muted fst-italic small">tempo di lettura {{$article->readDuration()}} min
+                <div class="my-3">
+                    <p class="card-subtitle fst-italic small">tempo di lettura {{ $article->readDuration() }}
+                        min
                     </p>
-                    <p class="small text-muted">Redatto il {{ $article->created_at->format('d/m/Y') }}<br>
-                        da <a class="text-capitalize text-muted"
+                    <p class="small">Redatto il {{ $article->created_at->format('d/m/Y') }}<br>
+                        da <a class="text-capitalize "
                             href="{{ route('article.byUser', $article->user) }}">{{ $article->user->name }}</a>
                     </p>
-                    <p class="small text-muted my-0">
+                    <p class="small my-0">
                         <span class="fw-bold">Tags:</span>
                         @foreach ($article->tags as $tag)
                             #{{ $tag->name }}
