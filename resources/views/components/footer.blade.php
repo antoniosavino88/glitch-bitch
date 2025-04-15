@@ -1,4 +1,4 @@
-<footer class="bg-body-tertiary text-center text-lg-start">
+<footer class="text-center text-lg-start bg-2">
     <!-- Grid container -->
     <div class="container p-4">
         <!--Grid row-->

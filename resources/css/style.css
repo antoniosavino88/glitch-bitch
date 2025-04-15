@@ -1,0 +1,51 @@
+:root {
+    --primary: #262b2c;
+    --secondary: #1c1f21;
+    --accent: #fe328c;
+    --text: #fff1f5;
+}
+
+* {
+    color: var(--text);
+}
+
+.bg-1 {
+    background-color: var(--primary);
+}
+
+.bg-2 {
+    background-color: var(--secondary);
+}
+
+.bg-3 {
+    background-color: var(--accent);
+}
+
+.bg-4 {
+    background-color: var(--text);
+}
+
+.text-1 {
+    color: var(--primary);
+}
+
+.text-2 {
+    color: var(--secondary);
+}
+
+.text-3 {
+    color: var(--accent);
+}
+
+.text-4 {
+    color: var(--text);
+}
+
+.transition {
+    transition: 0.5s;
+}
+
+/* NAVBAR */
+.logo-nav:hover {
+    transform: scale(1.1);
+}

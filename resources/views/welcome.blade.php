@@ -12,7 +12,7 @@
                         {{ session('alert') }}
                     </div>
                 @endif
-                <h1 class="text-center p-5">Glitch&Bitch</h1>
+                <h1 class="text-center p-5 text-3">Glitch&Bitch</h1>
 
                 <div class="container">
                     <div class="row justify-content-evenly">

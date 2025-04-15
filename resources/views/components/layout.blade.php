@@ -14,7 +14,7 @@
 <body>
     <x-navbar />
 
-    <div class="min-vh-100">
+    <div class="min-vh-100 bg-1">
         {{ $slot }}
     </div>
 
