@@ -40,7 +40,7 @@
                             name="password_confirmation">
                     </div>
                     <div class="mb-3 d-flex justify-content-center flex-column align-items-center">
-                        <button type="submit" class="btn btn-outline-secondary">Registrati</button>
+                        <button type="submit" class="btn button">Registrati</button>
                         <p class="mt-2">Sei già registrato? <a href="{{ route('login') }}"
                                 class="text-secondary">Clicca qui</a></p>
                     </div>

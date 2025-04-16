@@ -17,10 +17,10 @@
     <title>Glitch&Bitch</title>
 </head>
 
-<body>
+<body class="bg-1">
     <x-navbar />
 
-    <div class="min-vh-100 bg-1">
+    <div class="min-vh-100">
         {{ $slot }}
     </div>
 

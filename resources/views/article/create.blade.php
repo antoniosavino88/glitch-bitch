@@ -1,15 +1,15 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-secondary-subtle text-center">
+    <div class="container-fluid p-5 text-center">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h1 class="display-1">Inserisci un articolo</h1>
+                <h1 class="display-1 text-title">Inserisci un articolo</h1>
             </div>
         </div>
     </div>
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                <form action="{{ route('article.store') }}" method="POST" class="card p-5 shadow"
+                <form action="{{ route('article.store') }}" method="POST" class="card p-5 shadow bg-2"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
@@ -64,7 +64,7 @@
                         @enderror
                     </div>
                     <div class="mt-3 d-flex justify-content-center flex-column align-items-center">
-                        <button type="submit" class="btn btn-outline-secondary">Inserisci articolo</button>
+                        <button type="submit" class="btn button">Inserisci articolo</button>
                         <a href="{{ route('homepage') }}" class="text-secondary mt-2">Torna alla home</a>
                     </div>
                 </form>

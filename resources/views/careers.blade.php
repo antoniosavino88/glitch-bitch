@@ -46,7 +46,7 @@
                         @enderror
                     </div>
                     <div class="mt-3 d-flex justify-content-center">
-                        <button type="submit" class="btn btn-outline-secondary">Invia candidatura</button>
+                        <button type="submit" class="btn button">Invia candidatura</button>
                     </div>
                 </form>
             </div>
