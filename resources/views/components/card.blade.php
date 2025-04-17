@@ -16,6 +16,15 @@
                         @else
                             <p class="small">Nessuna categoria</p>
                         @endif
+                        @if ($article->type)
+                            <p class="small">
+                                <a href="{{ route('article.byType', ['type' => $article->type]) }}" class="text-capitalize mini-button transition">
+                                    {{ $article->type->name }}
+                                </a>
+                            </p>
+                        @else
+                            <p class="small">Nessun tipo di articolo</p>
+                        @endif
                     </div>
 
                     <div class="col-6 p-0 text-end">

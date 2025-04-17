@@ -38,12 +38,24 @@
                     <div class="mb-3">
                         <label for="category" class="form-label">Categoria</label>
                         <select name="category" id="category" class="form-control">
-                            <option selected disabled>Seleziona categoria</option>
+                            <option class="text-1" selected disabled>Seleziona categoria</option>
                             @foreach ($categories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                <option class="text-2" value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach
                         </select>
                         @error('category')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <label for="type" class="form-label">Tipo di articolo</label>
+                        <select name="type" id="type" class="form-control">
+                            <option class="text-1" selected disabled>Seleziona tipo</option>
+                            @foreach ($types as $type)
+                                <option class="text-2" value="{{ $type->id }}">{{ $type->name }}</option>
+                            @endforeach
+                        </select>
+                        @error('type')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
