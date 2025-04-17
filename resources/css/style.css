@@ -68,7 +68,6 @@
 
 .button {
     text-decoration: none;
-    /* background-color: var(--accent); */
     color: var(--accent);
     border-radius: 5px;
     border: 1px solid var(--accent);
@@ -81,7 +80,46 @@
     color: var(--text);
 }
 
+.button-car {
+    text-decoration: none;
+    color: var(--text);
+    border-radius: 5px;
+    background-color: var(--accent);
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.button-car:hover {
+    transform: scale(1.1);
+    border: 1px solid var(--accent);
+    background-color: var(--accent);
+    color: var(--text);
+}
+
 /* NAVBAR */
 .logo-nav:hover {
     transform: scale(1.1);
+    .button {
+        text-decoration: none;
+        /* background-color: var(--accent); */
+        color: var(--accent);
+        border-radius: 5px;
+        border: 1px solid var(--accent);
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        background-color: var(--accent);
+        color: var(--text);
+    }
+}
+
+/* HOMEPAGE */
+.carousel-custom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 18%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
