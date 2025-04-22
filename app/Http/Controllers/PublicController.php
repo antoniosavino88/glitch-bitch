@@ -14,10 +14,17 @@ class PublicController extends Controller implements HasMiddleware
 {
     public function homepage()
     {
+
+        $carouselArticles = Article::whereHas('type', function ($query) {
+            $query->where('name', 'Recensione');
+        })->latest()->take(5)->get();
+
         $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
-        return view('welcome', compact('articles'));
+
+        return view('welcome', compact('carouselArticles', 'articles'));
     }
-    public function careers(){
+    public function careers()
+    {
         return view('careers');
     }
     public static function middleware()
@@ -26,12 +33,12 @@ class PublicController extends Controller implements HasMiddleware
             new Middleware('auth', except: ['homepage']),
         ];
     }
-    public function careersSubmit (Request $request)
+    public function careersSubmit(Request $request)
     {
         $request->validate([
-            'role'=>'required',
-            'email'=>'required|email',
-            'message'=>'required'
+            'role' => 'required',
+            'email' => 'required|email',
+            'message' => 'required'
         ]);
         $user = Auth::user();
         $role = $request->role;
