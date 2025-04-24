@@ -23,7 +23,7 @@
                                     class="carousel-custom d-flex flex-column align-items-center justify-content-end pb-4">
                                     <h2 class="text-center m-0">{{ $article->title }} - {{ $article->type->name }}
                                     </h2>
-                                    <p class="mb-2">Autore: {{ $article->user->name }}</p>
+                                    <p class="mb-2 fst-italic">Autore: {{ $article->user->name }}</p>
                                     <a href="{{ route('article.show', $article) }}"
                                         class="btn button-car transition mx-4">Leggi</a>
                                 </div>

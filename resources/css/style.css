@@ -1,6 +1,7 @@
 :root {
     --primary: #262b2c;
     --secondary: #1c1f21;
+    --secondary-op: #1c1f21e7;
     --accent: #fe328c;
     --accent-op: #fe328a1a;
     --text: #f5f5f5;
@@ -98,6 +99,11 @@
 }
 
 /* NAVBAR */
+.nav-scrolled {
+    backdrop-filter: blur(7px);
+    background-color: var(--secondary-op);
+}
+
 .logo-nav:hover {
     transform: scale(1.1);
     .button {
@@ -130,9 +136,18 @@
     background-color: var(--accent-op);
 }
 
+/* CARD-HOME */
+.rounded-custom {
+    border-radius: 30px;
+}
+
+.margin-top-custom {
+    margin-top: 2.5rem;
+}
+
 .truncate-multiline {
     display: -webkit-box;
-    -webkit-line-clamp: 8; /* Numero di righe */
+    -webkit-line-clamp: 6; /* Numero di righe */
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
